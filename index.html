@@ -60,6 +60,11 @@
         margin-left: auto;
         margin-right: 0;
       }
+      .project-image {
+        max-width: 400px;
+        max-height: 200px;
+        height: auto;
+      }
     </style>
   </head>
   <body>
@@ -129,8 +134,8 @@
         <div class="col-md-6 col-lg-4">
           <div class="project-card">
             <img
-              src="https://via.placeholder.com/400x300"
-              class="card-img-top"
+              src="images/aws.jpeg"
+              class="card-img-top project-image"
               alt="Project 1"
             />
             <div class="card-body">
@@ -153,8 +158,8 @@
         <div class="col-md-6 col-lg-4">
           <div class="project-card">
             <img
-              src="https://via.placeholder.com/400x300"
-              class="card-img-top"
+              src="images/jenkins.png"
+              class="card-img-top project-image"
               alt="Project 2"
             />
             <div class="card-body">
@@ -177,8 +182,8 @@
         <div class="col-md-6 col-lg-4">
           <div class="project-card">
             <img
-              src="https://via.placeholder.com/400x300"
-              class="card-img-top"
+              src="images/terraform.png"
+              class="card-img-top project-image"
               alt="Project 3"
             />
             <div class="card-body">
@@ -198,7 +203,100 @@
         </div>
       </div>
     </section>
+    <section class="container py-5" id="fullstack-projects">
+      <h2 class="section-title">Full Stack Development Projects</h2>
+      <div class="row">
+        <!-- Full Stack Project 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <img
+              src="images/reactNodejs.jpeg"
+              class="card-img-top project-image"
+              alt="Full Stack Project 1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Dog Adoption Platform</h5>
+              <p class="card-text">
+                A platform connecting dog owners with potential adopters,
+                featuring user authentication and real-time chat functionality
+                for seamless communication.
+              </p>
+              <div class="d-flex gap-2 flex-wrap">
+                <span class="badge bg-primary">React</span>
+                <span class="badge bg-secondary">Node.js</span>
+                <span class="badge bg-success">MongoDB</span>
+                <span class="badge bg-danger">Socket.io</span>
+              </div>
+              <a
+                href="https://github.com/omerbenda98/react-project.git"
+                class="btn btn-outline-primary mt-3"
+                >View Project</a
+              >
+            </div>
+          </div>
+        </div>
 
+        <!-- Full Stack Project 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <img
+              src="images/nextJS.jpeg"
+              class="card-img-top project-image"
+              alt="Full Stack Project 2"
+            />
+            <div class="card-body">
+              <h5 class="card-title">UI Components Library</h5>
+              <p class="card-text">
+                A collaborative platform where developers can share, discover,
+                and reuse UI components. Features Google Authentication and a
+                seamless component browsing experience.
+              </p>
+              <div class="d-flex gap-2 flex-wrap">
+                <span class="badge bg-primary">Next.js</span>
+                <span class="badge bg-secondary">Google Auth</span>
+                <span class="badge bg-success">React</span>
+                <span class="badge bg-info">Component Library</span>
+              </div>
+              <a
+                href="https://github.com/omerbenda98/ui-topia.git"
+                class="btn btn-outline-primary mt-3"
+                >View Project</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Full Stack Project 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <img
+              src="images/graphQL.png"
+              class="card-img-top project-image"
+              alt="Full Stack Project 3"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Interactive Coding Academy</h5>
+              <p class="card-text">
+                An educational platform offering interactive coding courses
+                across various development subjects with efficient data fetching
+                through GraphQL.
+              </p>
+              <div class="d-flex gap-2 flex-wrap">
+                <span class="badge bg-primary">React</span>
+                <span class="badge bg-secondary">GraphQL</span>
+                <span class="badge bg-success">Apollo</span>
+                <span class="badge bg-warning">E-Learning</span>
+              </div>
+              <a
+                href="https://github.com/omerbenda98/PROJECT-LearnCode.git"
+                class="btn btn-outline-primary mt-3"
+                >View Project</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Skills Section -->
     <section class="bg-light py-5" id="skills">
       <div class="container">
@@ -371,7 +469,7 @@
     <!-- Footer -->
     <footer class="footer text-center">
       <div class="container">
-        <p class="mb-0">© 2025 Your Name. All rights reserved.</p>
+        <p class="mb-0">© 2025 Omer Ben David. All rights reserved.</p>
       </div>
     </footer>
 
