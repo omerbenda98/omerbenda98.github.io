@@ -65,6 +65,86 @@
         max-height: 200px;
         height: auto;
       }
+      .horizontal-timeline {
+        position: relative;
+        padding: 20px 0;
+        margin: 40px 0;
+      }
+
+      .timeline-track {
+        position: relative;
+        height: 50px;
+      }
+
+      .timeline-line {
+        position: absolute;
+        top: 25px;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: #e9ecef;
+      }
+
+      .year-marker {
+        position: absolute;
+        top: 0;
+        transform: translateX(-50%);
+      }
+
+      .year-badge {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background-color: #0d6efd;
+        color: #fff;
+        border-radius: 50%;
+        font-weight: bold;
+      }
+
+      .year-marker:nth-child(2) .year-badge {
+        background-color: #ffc107;
+      }
+
+      .year-marker:nth-child(3) .year-badge {
+        background-color: #198754;
+      }
+
+      /* Education Card Styles */
+      .education-card {
+        transition: transform 0.3s ease;
+        margin-bottom: 20px;
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .education-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card-header {
+        font-weight: bold;
+      }
+
+      .time-period {
+        color: #6c757d;
+        font-style: italic;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 767px) {
+        .year-marker {
+          display: none;
+        }
+
+        .year-marker:nth-child(2),
+        .year-marker:nth-child(3),
+        .year-marker:nth-child(4) {
+          display: block;
+        }
+      }
     </style>
   </head>
   <body>
@@ -93,6 +173,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#education">Education</a>
             </li>
           </ul>
         </div>
@@ -128,7 +211,7 @@
 
     <!-- Projects Section -->
     <section class="container py-5" id="projects">
-      <h2 class="section-title">My Projects</h2>
+      <h2 class="section-title">My DevOps Projects</h2>
       <div class="row">
         <!-- Project 1 -->
         <div class="col-md-6 col-lg-4">
@@ -386,6 +469,141 @@
           </div>
         </div>
 
+        <section class="bg-light py-5" id="education">
+          <div class="container">
+            <h2 class="section-title">Technical Background</h2>
+
+            <!-- Horizontal Timeline -->
+            <div class="horizontal-timeline">
+              <div class="timeline-track">
+                <div class="timeline-line"></div>
+                <div class="year-marker" style="left: 5%">
+                  <div class="year-badge">2022</div>
+                </div>
+                <div class="year-marker" style="left: 50%">
+                  <div class="year-badge">2023</div>
+                </div>
+                <div class="year-marker" style="left: 75%">
+                  <div class="year-badge">2024</div>
+                </div>
+                <div class="year-marker" style="left: 90%">
+                  <div class="year-badge">2025</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Education Cards -->
+            <div class="row mt-5">
+              <!-- 2022 Entry -->
+              <div class="col-md-4">
+                <div class="education-card card h-100">
+                  <div class="card-header bg-warning text-white">
+                    Started Full Stack Journey
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Full Stack Web Development</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      HackerU College
+                    </h6>
+                    <p class="card-text time-period">November 2022</p>
+                    <p class="card-text">
+                      Began intensive training in modern web development
+                      technologies:
+                    </p>
+                    <ul class="list-unstyled">
+                      <li>
+                        <span class="badge bg-primary me-2">HTML/CSS</span>
+                      </li>
+                      <li>
+                        <span class="badge bg-primary me-2">JavaScript</span>
+                      </li>
+                      <li>
+                        <span class="badge bg-primary me-2"
+                          >Web Fundamentals</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2023 Entry -->
+              <div class="col-md-4">
+                <div class="education-card card h-100">
+                  <div class="card-header bg-success text-white">
+                    Completed Full Stack
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Full Stack Web Development</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      HackerU College
+                    </h6>
+                    <p class="card-text time-period">
+                      November 2022 - September 2023
+                    </p>
+                    <p class="card-text">
+                      Completed training in full stack development:
+                    </p>
+                    <ul class="list-unstyled">
+                      <li>
+                        <span class="badge bg-primary me-2">Frontend</span>
+                        React, JavaScript
+                      </li>
+                      <li>
+                        <span class="badge bg-secondary me-2">Backend</span>
+                        Node.js, Express
+                      </li>
+                      <li>
+                        <span class="badge bg-success me-2">Databases</span>
+                        SQL, MongoDB
+                      </li>
+                      <li>
+                        <span class="badge bg-danger me-2">API</span> RESTful
+                        API development
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2024 Entry -->
+              <div class="col-md-4">
+                <div class="education-card card h-100">
+                  <div class="card-header bg-primary text-white">
+                    DevOps Engineering
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">DevOps Engineering</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      The External Studies Institute
+                    </h6>
+                    <p class="card-text time-period">January 2024 - Present</p>
+                    <p class="card-text">
+                      Training in DevOps practices and tools:
+                    </p>
+                    <ul class="list-unstyled">
+                      <li>
+                        <span class="badge bg-info me-2">AWS</span> Cloud
+                        infrastructure
+                      </li>
+                      <li>
+                        <span class="badge bg-info me-2">IaC</span> Terraform,
+                        Ansible
+                      </li>
+                      <li>
+                        <span class="badge bg-info me-2">CI/CD</span> Pipelines
+                      </li>
+                      <li>
+                        <span class="badge bg-info me-2">Containers</span>
+                        Docker, Kubernetes
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <div class="row mt-5">
           <div class="col-12">
             <h3 class="mb-4">AWS Services</h3>
