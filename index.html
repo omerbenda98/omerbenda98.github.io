@@ -35,6 +35,47 @@
       .project-card:hover {
         transform: translateY(-5px);
       }
+
+      /* Video styling */
+      .video-wrapper {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        margin: 20px 0;
+      }
+
+      .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+      }
+
+      .video-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 50px 0;
+        margin: 40px 0;
+      }
+
+      .video-container {
+        background: white;
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      }
+
+      .video-title {
+        color: white;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
       .skill-item {
         margin-bottom: 20px;
       }
@@ -144,6 +185,14 @@
         .year-marker:nth-child(4) {
           display: block;
         }
+
+        .video-section {
+          padding: 30px 0;
+        }
+
+        .video-container {
+          padding: 20px;
+        }
       }
     </style>
   </head>
@@ -167,6 +216,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#video-demo">Video Demo</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#skills">Skills</a>
@@ -194,9 +246,14 @@
               infrastructure. I build scalable, automated deployment pipelines
               and cloud-native applications.
             </p>
-            <a href="#contact" class="btn btn-primary btn-lg mt-3"
-              >Get In Touch</a
-            >
+            <div class="mt-3">
+              <a href="#contact" class="btn btn-primary btn-lg me-3"
+                >Get In Touch</a
+              >
+              <a href="#video-demo" class="btn btn-outline-primary btn-lg"
+                >🎥 Watch Demo</a
+              >
+            </div>
           </div>
           <div class="col-lg-6">
             <img
@@ -213,35 +270,13 @@
     <section class="container py-5" id="projects">
       <h2 class="section-title">My DevOps Projects</h2>
       <div class="row">
-        <!-- Project 1 -->
-        <!-- <div class="col-md-6 col-lg-4">
-          <div class="project-card">
-            <img
-              src="images/aws.jpeg"
-              class="card-img-top project-image"
-              alt="Project 1"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Kubernetes Cluster on AWS</h5>
-              <p class="card-text">
-                Implemented a production-grade Kubernetes cluster on AWS using
-                EKS with proper networking, security, and monitoring.
-              </p>
-              <div class="d-flex gap-2">
-                <span class="badge bg-primary">Kubernetes</span>
-                <span class="badge bg-secondary">AWS EKS</span>
-                <span class="badge bg-success">Terraform</span>
-              </div>
-              <a href="#" class="btn btn-outline-primary mt-3">View Project</a>
-            </div>
-          </div>
-        </div> -->
+        <!-- Final Project Card -->
         <div class="col-md-6 col-lg-4">
           <div class="project-card">
             <img
               src="images/aws.jpeg"
               class="card-img-top project-image"
-              alt="Project 1"
+              alt="Final Project"
             />
             <div class="card-body">
               <h5 class="card-title">🎬 Final Project Demo</h5>
@@ -254,23 +289,54 @@
                 <span class="badge bg-success">Capstone</span>
                 <span class="badge bg-primary">DevOps</span>
               </div>
-              <a href="final-project.html" class="btn btn-primary mt-3"
+              <a href="#video-demo" class="btn btn-primary mt-3"
                 >🎥 Watch Demo</a
               >
             </div>
           </div>
         </div>
-        <!-- Project 2 -->
-        <div class="video-wrapper">
-          <iframe
-            src="https://drive.google.com/file/d/1YEaLX0ldRsF7x8n1YMEPft5Y1EU3J0P8/preview"
-            frameborder="0"
-            allowfullscreen
-          >
-          </iframe>
+
+        <!-- Additional DevOps Projects can go here -->
+      </div>
+    </section>
+
+    <!-- Video Demo Section -->
+    <section class="video-section" id="video-demo">
+      <div class="container">
+        <h2 class="video-title display-5 fw-bold">🎬 Final Project Demo</h2>
+        <div class="video-container">
+          <h4 class="text-center mb-4">
+            DevOps Infrastructure & CI/CD Pipeline
+          </h4>
+          <p class="text-center text-muted mb-4">
+            Watch the complete walkthrough of my enterprise-grade DevOps
+            solution featuring AWS EKS and automated deployment pipelines
+          </p>
+          <div class="video-wrapper">
+            <iframe
+              src="https://drive.google.com/file/d/1YEaLX0ldRsF7x8n1YMEPft5Y1EU3J0P8/preview"
+              frameborder="0"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+          <div class="text-center mt-4">
+            <div class="d-flex flex-wrap justify-content-center gap-2 mb-3">
+              <span class="badge bg-primary p-2">AWS EKS</span>
+              <span class="badge bg-secondary p-2">Kubernetes</span>
+              <span class="badge bg-success p-2">CI/CD</span>
+              <span class="badge bg-info p-2">Terraform</span>
+              <span class="badge bg-warning p-2">Jenkins</span>
+            </div>
+            <p class="text-muted small">
+              This project demonstrates enterprise-level DevOps implementation
+              with Kubernetes infrastructure and automated deployment pipelines.
+            </p>
+          </div>
         </div>
       </div>
     </section>
+
     <section class="container py-5" id="fullstack-projects">
       <h2 class="section-title">Full Stack Development Projects</h2>
       <div class="row">
